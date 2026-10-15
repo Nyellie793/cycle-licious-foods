@@ -1,7 +1,7 @@
-import { Camera } from 'lucide-react';
 import Link from 'next/link';
+import { InstagramIcon } from '@/components/InstagramIcon';
 import { Logo } from '@/components/Logo';
-import { INSTAGRAM_URL } from '@/lib/format';
+import { INSTAGRAM_HANDLE, INSTAGRAM_URL } from '@/lib/format';
 
 export function Footer() {
   return (
@@ -29,7 +29,7 @@ export function Footer() {
             rel="noopener noreferrer"
             className="mt-3 inline-flex items-center gap-2 text-sm text-cocoa-soft hover:text-cocoa"
           >
-            <Camera className="h-4 w-4" /> Instagram
+            <InstagramIcon className="h-4 w-4" /> {INSTAGRAM_HANDLE}
           </a>
         </div>
       </div>

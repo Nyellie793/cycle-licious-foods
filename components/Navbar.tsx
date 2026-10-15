@@ -5,8 +5,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { useCart } from '@/components/CartProvider';
+import { InstagramIcon } from '@/components/InstagramIcon';
 import { Logo } from '@/components/Logo';
 import { SearchOverlay } from '@/components/SearchOverlay';
+import { INSTAGRAM_URL } from '@/lib/format';
 import type { Product } from '@/lib/products';
 
 const LINKS = [
@@ -53,6 +55,15 @@ export function Navbar({ products }: { products: Product[] }) {
           >
             <Search className="h-5 w-5" />
           </button>
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Cycle-licious on Instagram"
+            className="hidden rounded-full p-2.5 hover:bg-blush sm:block"
+          >
+            <InstagramIcon />
+          </a>
           <Link href="/login" aria-label="Account" className="hidden rounded-full p-2.5 hover:bg-blush sm:block">
             <User className="h-5 w-5" />
           </Link>

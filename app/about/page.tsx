@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import { FlaskConical, Heart, MessageCircle, Microscope, Users } from 'lucide-react';
 import Link from 'next/link';
+import { InstagramIcon } from '@/components/InstagramIcon';
 import { LifestylePhoto } from '@/components/LifestylePhoto';
 import { Reveal } from '@/components/Reveal';
+import { INSTAGRAM_HANDLE, INSTAGRAM_URL } from '@/lib/format';
 
 export const metadata: Metadata = {
   title: 'Our story',
@@ -47,6 +49,14 @@ export default function AboutPage() {
             granola. Both were prototyped and tested among women, and refined through feedback from our Instagram
             community.
           </p>
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center gap-2 font-semibold text-primary-dark hover:underline"
+          >
+            <InstagramIcon className="h-5 w-5" /> Join the conversation {INSTAGRAM_HANDLE}
+          </a>
         </Reveal>
         <Reveal delay={0.15}>
           <LifestylePhoto

@@ -64,7 +64,7 @@ npm run dev                  # http://localhost:3000
 ## Content to replace before launch
 
 - **Testimonials** in `components/Testimonials.tsx` are sample wording. Swap in real Instagram comments (with permission).
-- **Instagram handle**: set `NEXT_PUBLIC_INSTAGRAM_URL` to your real profile.
+- **Instagram**: links point to https://www.instagram.com/cycle_licious_foods/ by default. Override with `NEXT_PUBLIC_INSTAGRAM_URL` if the profile changes.
 - **Shipping rates** live in `lib/shipping.ts`.
 
 ## Project structure
