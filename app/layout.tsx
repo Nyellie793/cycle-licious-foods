@@ -23,6 +23,13 @@ export const metadata: Metadata = {
     title: 'Cycle-licious Foods',
     description: 'Breakfast That Loves Your Hormones Back',
     type: 'website',
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Cycle-licious Foods. Nourish your cycle. Love yourself.' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cycle-licious Foods',
+    description: 'Breakfast That Loves Your Hormones Back',
+    images: ['/og.png'],
   },
 };
 

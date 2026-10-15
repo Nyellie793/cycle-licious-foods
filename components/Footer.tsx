@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="border-t border-primary/30 bg-blush-soft">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
         <div>
-          <Logo />
+          <Logo variant="full" />
           <p className="mt-3 max-w-xs text-sm text-cocoa-soft">
             Breakfast that loves your hormones back. Whole-food, fibre-rich foods made with women in mind.
           </p>
