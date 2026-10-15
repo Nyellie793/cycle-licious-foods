@@ -1,32 +1,50 @@
 /**
  * Lifestyle photography. Files live in /public/images/lifestyle/.
- * Replace or add real photos there (see README, "Lifestyle photos").
- * Until a file exists the <LifestylePhoto /> component shows a soft gradient.
+ * To swap a photo, replace the file (keep the name) or change `src` here.
+ * `position` is the CSS object-position focal point used when the photo is cropped.
+ * If a file is missing, <LifestylePhoto /> shows a soft gradient instead.
  */
 export interface Lifestyle {
   src: string;
   alt: string;
+  position?: string;
 }
 
 export const LIFESTYLE: Record<string, Lifestyle> = {
   hero: {
     src: '/images/lifestyle/hero.jpg',
-    alt: 'A woman enjoying a healthy breakfast in soft morning light',
+    alt: 'A woman in a white headwrap enjoying pancakes and fresh fruit for breakfast at home',
+    position: 'center 30%',
   },
   about: {
     src: '/images/lifestyle/about.jpg',
-    alt: 'Friends laughing together over a healthy brunch',
+    alt: 'Two friends laughing together over a croissant and a glass of milk in soft morning light',
+    position: 'center 40%',
   },
   problem: {
     src: '/images/lifestyle/problem.jpg',
-    alt: 'A woman reading a food label in her kitchen',
+    alt: 'A smiling woman enjoying a bowl of fresh fruit in her kitchen',
+    position: 'center 35%',
   },
   banner: {
     src: '/images/lifestyle/banner.jpg',
-    alt: 'A woman doing a calm morning stretch at home',
+    alt: 'Two women sharing a healthy breakfast of avocado toast and eggs',
+    position: 'center 35%',
   },
-  community1: { src: '/images/lifestyle/community-1.jpg', alt: 'Woman holding a granola bowl' },
-  community2: { src: '/images/lifestyle/community-2.jpg', alt: 'Women friends at brunch' },
-  community3: { src: '/images/lifestyle/community-3.jpg', alt: 'Woman in a morning yoga routine' },
-  community4: { src: '/images/lifestyle/community-4.jpg', alt: 'Woman laughing in a sunny kitchen' },
+  community1: {
+    src: '/images/lifestyle/community-1.jpg',
+    alt: 'A woman savouring a morning cup of tea',
+  },
+  community2: {
+    src: '/images/lifestyle/community-2.jpg',
+    alt: 'Friends sharing breakfast and laughing together',
+  },
+  community3: {
+    src: '/images/lifestyle/community-3.jpg',
+    alt: 'A relaxed breakfast table with pancakes and fresh fruit',
+  },
+  community4: {
+    src: '/images/lifestyle/community-4.jpg',
+    alt: 'Avocado toast and eggs on a wooden table',
+  },
 };

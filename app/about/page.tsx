@@ -81,7 +81,7 @@ export default function AboutPage() {
 
       <section className="relative">
         <LifestylePhoto name="banner" sizes="100vw" className="h-72 w-full sm:h-96" />
-        <div className="absolute inset-0 flex items-center justify-center bg-cocoa/35 px-4 text-center">
+        <div className="absolute inset-0 flex items-center justify-center bg-cocoa/50 px-4 text-center">
           <Reveal className="max-w-2xl text-white">
             <Heart className="mx-auto h-8 w-8" />
             <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Our mission</h2>

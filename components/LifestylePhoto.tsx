@@ -29,6 +29,7 @@ export function LifestylePhoto({ name, className = '', priority = false, sizes =
           fill
           sizes={sizes}
           priority={priority}
+          style={photo.position ? { objectPosition: photo.position } : undefined}
           className="object-cover"
           onError={() => setFailed(true)}
         />
