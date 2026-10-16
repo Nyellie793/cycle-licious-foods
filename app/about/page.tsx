@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import { FlaskConical, Heart, MessageCircle, Microscope, Users } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { InstagramIcon } from '@/components/InstagramIcon';
 import { LifestylePhoto } from '@/components/LifestylePhoto';
 import { Reveal } from '@/components/Reveal';
 import { INSTAGRAM_HANDLE, INSTAGRAM_URL } from '@/lib/format';
+import { DIELINES } from '@/lib/range';
 
 export const metadata: Metadata = {
   title: 'Our story',
@@ -100,6 +102,37 @@ export default function AboutPage() {
               morning at a time.
             </p>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="bg-blush-soft py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold sm:text-4xl">Behind the box</h2>
+            <p className="mt-3 text-cocoa-soft">
+              Every Cycle-licious box carries the same three promises: nourish your cycle, love yourself, fuel your
+              body. Here is the flat artwork behind two of our boxes.
+            </p>
+          </Reveal>
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {DIELINES.map((d, i) => (
+              <Reveal key={d.src} delay={i * 0.1}>
+                <figure className="h-full overflow-hidden rounded-4xl bg-white p-4 shadow-soft">
+                  <Image
+                    src={d.src}
+                    alt={d.alt}
+                    width={d.width}
+                    height={d.height}
+                    sizes="(min-width: 768px) 45vw, 100vw"
+                    className="h-auto w-full rounded-3xl"
+                  />
+                  <figcaption className="px-2 pb-1 pt-4 text-center text-sm font-semibold text-cocoa-soft">
+                    {d.name}
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

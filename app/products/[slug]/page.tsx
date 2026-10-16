@@ -17,6 +17,7 @@ import { ProductGallery } from '@/components/ProductGallery';
 import { ProductPurchase } from '@/components/ProductPurchase';
 import { Reveal } from '@/components/Reveal';
 import { PRODUCT_CONTENT, getProductBySlug, getProducts } from '@/lib/products';
+import { PACKAGING } from '@/lib/range';
 
 const ICONS: Record<string, LucideIcon> = {
   wheat: Wheat,
@@ -48,12 +49,14 @@ export default async function ProductPage({ params }: { params: { slug: string }
   const product = await getProductBySlug(params.slug);
   if (!product) notFound();
   const content = PRODUCT_CONTENT[product.slug];
+  // Main photo first, then the packaging shots, then the remaining product photos.
+  const gallery = [product.images[0], ...(PACKAGING[product.slug] ?? []), ...product.images.slice(1)];
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 md:py-16">
       {/* Hero: gallery + buy box */}
       <div className="grid gap-10 lg:grid-cols-2">
-        <ProductGallery images={product.images} name={product.name} />
+        <ProductGallery images={gallery} name={product.name} />
         <div className="space-y-6">
           <div>
             <p className="text-sm font-bold uppercase tracking-widest text-primary-dark">Cycle-licious Foods</p>

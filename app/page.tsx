@@ -1,6 +1,8 @@
 import { ArrowRight, Leaf, ShoppingBag, Sparkles, Wheat } from 'lucide-react';
 import Link from 'next/link';
+import { ComingSoon } from '@/components/ComingSoon';
 import { InstagramSection } from '@/components/InstagramSection';
+import { PackagingShowcase } from '@/components/PackagingShowcase';
 import { LifestylePhoto } from '@/components/LifestylePhoto';
 import { NewsletterForm } from '@/components/NewsletterForm';
 import { ProductCard } from '@/components/ProductCard';
@@ -87,6 +89,8 @@ export default async function HomePage() {
         </div>
       </section>
 
+      <PackagingShowcase />
+
       {/* Problem / solution */}
       <section className="bg-blush-soft py-20">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 md:grid-cols-2">
@@ -143,11 +147,12 @@ export default async function HomePage() {
         </div>
       </section>
 
+      <ComingSoon className="bg-white/70" />
       <Testimonials />
       <InstagramSection />
 
       {/* Newsletter */}
-      <section className="pb-24">
+      <section id="newsletter" className="scroll-mt-24 pb-24">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <Reveal className="rounded-4xl bg-blush p-8 text-center shadow-soft sm:p-12">
             <h2 className="text-3xl font-bold">Get breakfast ideas &amp; first access</h2>

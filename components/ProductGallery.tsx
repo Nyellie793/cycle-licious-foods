@@ -19,7 +19,10 @@ export function ProductGallery({ images, name }: { images: string[]; name: strin
           className="object-cover"
         />
       </div>
-      <div className="grid grid-cols-3 gap-3">
+      <div
+        className="grid gap-3"
+        style={{ gridTemplateColumns: `repeat(${Math.min(images.length, 5)}, minmax(0, 1fr))` }}
+      >
         {images.map((src, i) => (
           <button
             key={src}
